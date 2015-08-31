@@ -2,7 +2,7 @@
 import booth.AlgoritmoBooth;
 import booth.OperacionesBinarias;
 
-public class Hola {
+public class Pruebas {
 
     public static void main(String[] args) {
         AlgoritmoBooth ab = new AlgoritmoBooth();

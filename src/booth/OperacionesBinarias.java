@@ -23,7 +23,6 @@ public class OperacionesBinarias {
         }
         return resultado;
     }
-    
 
     /**
      *
