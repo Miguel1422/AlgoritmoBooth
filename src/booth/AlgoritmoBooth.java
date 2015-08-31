@@ -2,13 +2,37 @@ package booth;
 
 public class AlgoritmoBooth extends OperacionesBinarias {
 
+    /**
+     * El numero de filas que estan reservadas para inicializar la tabla
+     */
     private static final int ASP_FILAS = 3;
+    /**
+     * El bit extra para la ultima columna
+     */
     private static final int BIT_EXTRA = 1;
+    /**
+     * El tamanio minimo o bits que va a tener el numero ingresado ESTA MAL
+     * NOMBRADO no tiene tamanio de 1 Byte tiene 4 bits aunque puede variar
+     * dependiendo del tamanio del numero ingresado
+     */
     private static int BYTE = 4;
+    /**
+     * El tamanio minimo que pueden tener un conjunto de columnas
+     */
     private static final int NUM_VALIDO = 4;
-    private int tam;
+    /**
+     * Si la operacion va asoportar numeros negativos
+     */
     private boolean negativos;
+    /**
+     * La matriz que va a almacenar todas los valores que se han hecho
+     */
     private int[][] tablero;
+    /**
+     * El tamanio del numero ingresado pero ya en Bytes ejemplo (2 bits se
+     * convierte a 4, 5 se convierte a 8, 9 se convierte a 12 etc)
+     */
+    private int tam;
 
     /**
      * Este metodo coloca las filas ASP para poder empezar a hacer las
@@ -143,6 +167,12 @@ public class AlgoritmoBooth extends OperacionesBinarias {
         return multiplicaionBinaria(decimalABinario(bin1), decimalABinario(bin2), negativos);
     }
 
+    /**
+     *
+     * @param bin1 EL primer numero en decimal Multiplicando
+     * @param bin2 EL segundo numero en decimal Multiplicador
+     * @return Resultado de esa multiplicaion en positivo
+     */
     public String multiplicaionBinaria(int bin1, int bin2) {
         return multiplicaionBinaria(decimalABinario(bin1), decimalABinario(bin2), false);
     }
@@ -166,6 +196,12 @@ public class AlgoritmoBooth extends OperacionesBinarias {
         return r;
     }
 
+    /**
+     *
+     * @param bin1 EL primer numero binario Multiplicando
+     * @param bin2 EL segundo numero binario Multiplicador
+     * @return Resultado de esa multiplicaion en positivo
+     */
     public String multiplicaionBinaria(String bin1, String bin2) {
         return multiplicaionBinaria(bin1, bin2, false);
     }

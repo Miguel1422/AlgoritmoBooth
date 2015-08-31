@@ -2,8 +2,16 @@ package booth;
 
 import java.util.ArrayList;
 
+/**
+ * Clase que realiza algunas operaciones binarias
+ *
+ * @author Miguel
+ */
 public class OperacionesBinarias {
 
+    /**
+     * Tamanio de un Byte
+     */
     private static final int TAM_BYTE = 8;
 
     /**
