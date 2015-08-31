@@ -32,9 +32,6 @@ public class AlgoritmoBooth extends OperacionesBinarias {
             p[i + tam] = Integer.parseInt("" + multiplicador[i]);
         }
 
-//        for (int i = 0; i < s.length; i++) {
-//            System.out.print(s[i]);
-//        }
         //System.out.println(" ya largo: " + s.length);
         //System.out.println("Multiplicador " + bin2);
         //System.out.println("Vector " + Arrays.toString(p));
@@ -53,15 +50,6 @@ public class AlgoritmoBooth extends OperacionesBinarias {
             tablero[2][i] = p[i];
         }
 
-        for (int i = multiplicando.length; i < tablero[0].length; i++) {
-            //tablero [2] [i] = multiplicador [i];
-        }
-
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < tablero[0].length; j++) {
-                //tablero[i][j] = 1;
-            }
-        }
     }
 
     /**
@@ -188,7 +176,7 @@ public class AlgoritmoBooth extends OperacionesBinarias {
      *
      * @param bin1 El multiplicando binario
      * @param bin2 El multiplicador binario
-     * @param negativos Se necesita operar un numero negativo?
+     * @param negativos Se necesita operar un numero negativo? NO SE RECOMIENDA
      * @return Una matriz con los resultados
      */
     public int[][] obtenerTablero(String bin1, String bin2, boolean negativos) {
@@ -257,7 +245,7 @@ public class AlgoritmoBooth extends OperacionesBinarias {
             System.out.println("Error 2");
             return new int[2][2];
         }
-        //TODO Verificar si desde aqui esto es necesario
+
         if (bin1.length() > bin2.length()) {
             this.tam = bin1.length();
         } else {
@@ -267,7 +255,6 @@ public class AlgoritmoBooth extends OperacionesBinarias {
 
         bin1 = a[0];
         bin2 = a[1];
-        //TODO Hasta aqui
 
         System.out.println("El multiplicando binario es: " + bin1);
         System.out.println("En decimal su valor es de: " + binarioADec(bin1));
@@ -302,8 +289,6 @@ public class AlgoritmoBooth extends OperacionesBinarias {
             //Si los 2 ultimos valores del tablero son iguales se hace un recorrido a la derecha
 
             if (tablero[i][tablero[i].length - 2] == tablero[i][tablero[i].length - 1]) {
-                //TODO: acabar esto
-
                 //System.out.println("Valores " + tablero[i][tablero[i].length - 2] + " " + tablero[i][tablero[i].length - 1]);
                 actual = corrimientoDerecha(actual, 1);
                 modificarFila(actual, i + 1);
@@ -325,14 +310,10 @@ public class AlgoritmoBooth extends OperacionesBinarias {
                     b += tablero[0][j];
                 }
 
-                //TODO hacer el recorrido a la derecha
                 b = sumaBinaria(actual, b, false);
                 actual = corrimientoDerecha(b, 1);
                 modificarFila(actual, i + 1);
             }
-
-            //System.out.println(i);
-            //System.out.println("actual " + actual);
         }
 
         imprimirTablero();

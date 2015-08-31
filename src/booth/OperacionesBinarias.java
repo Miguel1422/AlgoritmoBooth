@@ -160,7 +160,7 @@ public class OperacionesBinarias {
         return corrimientoDerecha(bin, desplazamientos, true);
     }
 
-    //TODO hacer un metodo corrimiento a la izquierda
+    //TODO hacer un metodo corrimiento a la izquierda solo por tenerlo
     /**
      *
      * @param h Los valores que se desean nivelar
